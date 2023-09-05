@@ -16,24 +16,24 @@ def add_noise_to_features(X, noise_mean, noise_std_dev):
 def create_bagging_samples(strategy, X, y, num_estimators, sample_size):
     bagging_samples = []
 
-    if strategy == "small_sacks":
+    if strategy == "small_bags":
         for i in range(num_estimators):
             indices = np.random.choice(X.shape[0], size=sample_size, replace=True)
             bagging_samples.append((X[indices], y[indices]))
 
-    elif strategy == "small_sacks_without_repetition":
+    elif strategy == "small_bags_without_repetition":
         for _ in range(num_estimators):
             indices = np.random.choice(X.shape[0], size=sample_size, replace=False)
             bagging_samples.append((X[indices], y[indices]))
 
-    elif strategy == "disjunctive_partitions":
+    elif strategy == "disjunctive_distributions":
         step = X.shape[0] // num_estimators
         for i in range(num_estimators):
             start_idx = i * step
             end_idx = (i + 1) * step if i < num_estimators - 1 else X.shape[0]
             bagging_samples.append((X[start_idx:end_idx], y[start_idx:end_idx]))
 
-    elif strategy == "disjunctive_sacks":
+    elif strategy == "disjunctive_bags":
         step = X.shape[0] // num_estimators
         num_replications = sample_size - step
 

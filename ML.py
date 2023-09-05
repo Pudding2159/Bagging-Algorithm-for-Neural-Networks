@@ -21,7 +21,7 @@ def create_bagging_samples(strategy, X, y, num_estimators, sample_size):
             indices = np.random.choice(X.shape[0], size=sample_size, replace=True)
             bagging_samples.append((X[indices], y[indices]))
 
-    elif strategy == "small_bags_without_repetition":
+    elif strategy == "small_bags_without_repeats":
         for _ in range(num_estimators):
             indices = np.random.choice(X.shape[0], size=sample_size, replace=False)
             bagging_samples.append((X[indices], y[indices]))
@@ -57,6 +57,7 @@ def create_bagging_samples(strategy, X, y, num_estimators, sample_size):
 iris = load_iris()
 X = iris.data
 y = iris.target
+
 
 noise_mean = 0.5
 noise_std_dev = 0.5

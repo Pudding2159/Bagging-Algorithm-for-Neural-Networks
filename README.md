@@ -26,7 +26,7 @@ file
 
 This program provides an interactive interface in which the user can select
 preferred method of generating sample bags, also known as bootstrap samples.
-There are methods for <font color="red">small bags, small bags without repetition, disjunctive
+There are methods for <font color="red">small bags, small bags without repeats, disjunctive
 distributions, and disjunctive bags</font>
 .
 After the user selects an option, the program proceeds to generate bag
@@ -48,15 +48,14 @@ models.
 
 
 ## Results 
-![]()
 
-Graphical output of the results using the "Small Bags" strategy
-![]()
+### Graphical output of the results using the "Small Bags" strategy
+![](https://github.com/Pudding2159/Bagging-Algorithm-for-Neural-Networks/blob/main/Test_Image/image.png?raw=true)
+### Graphical output of the results using the "Small bags without repeats" strategy
+![](https://github.com/Pudding2159/Bagging-Algorithm-for-Neural-Networks/blob/main/Test_Image/image2.png?raw=true)
 
-Graphical output of the results using the "Small bags without repetition" strategy
-![]()
+### Graphical output of the results using the "Disjunctive distributions" strategy
+![](https://github.com/Pudding2159/Bagging-Algorithm-for-Neural-Networks/blob/main/Test_Image/image3.png?raw=true)
 
-Graphical output of the results using the "Disjunctive distributions" strategy
-![]()
-
-Graphical output of the results using the "Disjunctive bags" strategy
+### Graphical output of the results using the "Disjunctive bags" strategy
+![](https://github.com/Pudding2159/Bagging-Algorithm-for-Neural-Networks/blob/main/Test_Image/image4.png?raw=true)
